@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | visitors</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = no" />
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link href="css/freeboard.min.css" rel="stylesheet" />
+    <style>
+        #info-table tr td {
+            padding: 15px;
+        }
+        #suspected-table p {
+            color:red;
+            padding: 10px;
+        }
+        #report-info {
+            color: red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<header style="margin:20px auto;width:92%;">
+<h1 id="board-logo" class="title bordered" style="font-size:30px;">
+    <span> Visitors Information </span>
+</h1>
+</header>
+<div id="board-content" style="top: 0px !important;padding-top: 0px;">
+    <div class="gridster responsive-column-width">
+        <ul data-bind="grid: true">
+        </ul>
+    </div>
+</div>
+<header id="main-header" data-bind="if:allow_edit">
+    <div id="admin-bar">
+        <div id="admin-menu">
+            <div id="board-tools">
+                <div id="board-actions">
+                    <ul class="board-toolbar vertical">
+                    </ul>
+                </div>
+            </div>
+            <div id="datasources">
+                <div class="datasource-list-container">
+                    <table class="table table-condensed sub-table" id="datasources-list" data-bind="if: datasources().length">
+                        <tbody data-bind="foreach: datasources">
+                        <tr>
+                            <td>
+                                <span class="text-button datasource-name" data-bind="text: name, pluginEditor: {operation: 'edit', type: 'datasource'}"></span>
+                            </td>
+                            <td data-bind="text: last_updated"></td>
+                            <td>
+                                <ul class="board-toolbar">
+                                    <li data-bind="click: updateNow"><i class="icon-refresh icon-white"></i></li>
+                                    <li data-bind="pluginEditor: {operation: 'delete', type: 'datasource'}">
+                                        <i class="icon-trash icon-white"></i></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="column-tools" class="responsive-column-width">
+        <ul class="board-toolbar left-columns">
+            <li class="column-tool add" data-bind="click: addGridColumnLeft"><span class="column-icon right"></span><i class="icon-arrow-left icon-white"></i></li>
+            <li class="column-tool sub" data-bind="click: subGridColumnLeft"><span class="column-icon left"></span><i class="icon-arrow-right icon-white"></i></li>
+        </ul>
+        <ul class="board-toolbar right-columns">
+            <li class="column-tool sub" data-bind="click: subGridColumnRight"><span class="column-icon right"></span><i class="icon-arrow-left icon-white"></i></li>
+            <li class="column-tool add" data-bind="click: addGridColumnRight"><span class="column-icon left"></span><i class="icon-arrow-right icon-white"></i></li>
+        </ul>
+    </div>
+</header>
+
+<div style="display:hidden">
+    <ul data-bind="template: { name: 'pane-template', foreach: panes}">
+    </ul>
+</div>
+<script src="js/freeboard.thirdparty.min.js"></script>
+<script type="text/javascript">
+        head.js("js/freeboard_plugins.min.js",
+                // *** Load more plugins here ***
+                function(){
+                    $(function()
+                    { //DOM Ready
+                        freeboard.initialize(true);
+
+                        var hashpattern = 'dashboard.json';
+                        if (hashpattern !== null) {
+                            $.getJSON(hashpattern, function(data) {
+                                freeboard.loadDashboard(data, function() {
+                                    freeboard.setEditing(false);
+                                });
+                            });
+                        }
+
+                    });
+                });
+</script>
+<script type="text/html" id="pane-template">
+    <li data-bind="pane: true">
+        <header>
+            <h1 data-bind="text: title"></h1>
+            <ul class="board-toolbar pane-tools">
+                <li data-bind="pluginEditor: {operation: 'add', type: 'widget'}">
+                    <i class="icon-plus icon-white"></i>
+                </li>
+                <li data-bind="pluginEditor: {operation: 'edit', type: 'pane'}">
+                    <i class="icon-wrench icon-white"></i>
+                </li>
+                <li data-bind="pluginEditor: {operation: 'delete', type: 'pane'}">
+                    <i class="icon-trash icon-white"></i>
+                </li>
+            </ul>
+        </header>
+        <section data-bind="foreach: widgets">
+            <div class="sub-section" data-bind="css: 'sub-section-height-' + height()">
+                <div class="widget" data-bind="widget: true, css:{fillsize:fillSize}"></div>
+                <div class="sub-section-tools">
+                    <ul class="board-toolbar">
+                        <!-- ko if:$parent.widgetCanMoveUp($data) -->
+                        <li data-bind="click:$parent.moveWidgetUp"><i class="icon-chevron-up icon-white"></i></li>
+                        <!-- /ko -->
+                        <!-- ko if:$parent.widgetCanMoveDown($data) -->
+                        <li data-bind="click:$parent.moveWidgetDown"><i class="icon-chevron-down icon-white"></i></li>
+                        <!-- /ko -->
+                        <li data-bind="pluginEditor: {operation: 'edit', type: 'widget'}"><i class="icon-wrench icon-white"></i></li>
+                        <li data-bind="pluginEditor: {operation: 'delete', type: 'widget'}"><i class="icon-trash icon-white"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </li>
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Beacon Notifications",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "<div id=\"suspected-table\"></div>",
+						"height": 6
+					}
+				}
+			]
+		},
+		{
+			"title": "Reported Incidents",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "return '<div id=\"report-table\"></div><script> var monitorF = new Firebase(\"https://vivid-inferno-4516.firebaseio.com\"); monitorF.child(\"report\").on(\"value\", function(snapshot) {var reportInfo = $(\"#report-table\"); reportInfo.empty(); snapshot.forEach(function(childSnapshot) { var user = childSnapshot.val(); if(user[\"actionRequired\"] == \"true\"){$(\"#reportInfo\").append(\"<p>Reported suspected activity around (lat,long)#\" + user[\"lat\"] + \", \" + user[\"long\"] + \"</p>\");}}); }); </script>';",
+						"height": 6
+					}
+				}
+			]
+		},
+		{
+			"title": "Recent Visitors",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "return '<table id=\"info-table\" border=\"1\"></table><script> var monitorF = new Firebase(\"https://vivid-inferno-4516.firebaseio.com\"); monitorF.child(\"user\").on(\"value\", function(snapshot) {var info = $(\"#info-table\"); info.empty(); $(\"#suspected-table\").empty; info.append(\"<tr> <td><b>Name</b></td> <td><b>Aadhar Number</b></td> <td><b>Payment</b></td> </tr>\"); snapshot.forEach(function(childSnapshot) { var user = childSnapshot.val(); info.append(\"<tr><td>\" + user[\"name\"] + \"</td><td>\" + user[\"aadhar\"] + \"</td><td>\" + user[\"payment\"] + \"</td></tr>\"); if(user[\"actionRequired\"] == \"true\"){$(\"#suspected-table\").append(\"<p>Suspected Activity around beacon#\" + user[\"beacon\"] + \" by \" + user[\"name\"] + \" with aadhar \" + user[\"aadhar\"] + \".</p>\");}}); }); </script>';",
+						"height": 6
+					}
+				}
+			]
+		}
+	],
+	"datasources": [],
+	"columns": 3
+}

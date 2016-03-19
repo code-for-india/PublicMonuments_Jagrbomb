@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="NoDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/Window</item>
+
+    </style>
+
+    <style name="WindowAnimation" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/Window</item>
+    </style>
+
+    <!-- Animations for a non-full-screen window or activity. -->
+    <style name="Window">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+
+    </style>
+
+
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/top_to_bottom</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+    <style name="hamburgertheme" parent="Base.Theme.AppCompat">
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
+    <style name="dialog1" parent="Base.Theme.AppCompat">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
+    <style name="NoDialogTest" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

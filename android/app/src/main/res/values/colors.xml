@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_quiz_submission_bg">#5EACD5</color>
+    <color name="color_quiz_submission_heading">#526B81</color>
+    <color name="color_quiz_submission_edittext">#D8E2E2</color>
+    <color name="color_quiz_submission_button_cancel_text">#4F4D54</color>
+    <color name="color_quiz_submission_button_submit_text">#DCE1E1</color>
+    <color name="color_quiz_submission_button_cancel_background">#F3F3F3</color>
+    <color name="color_quiz_submission_button_submit_background">#a95422</color>
+    <color name="color_quiz_activity_header">#DCE1E1</color>
+    <color name="color_quiz_activity_question_text">#4F4D54</color>
+    <color name="colorPrimary">#3F51B5</color><color name="colorPrimaryDark">#303F9F</color><color name="colorAccent">#FF4081</color><color name="red">#aa0000</color>
+
+
+    <!--Add by bharat-->
+
+    <color name="color_toolbar_title">#4f4d54</color>
+    <color name="color_toolbar">#c3beb3</color>
+    <color name="color_toolbar_quiz_button">#82aed6</color>
+    <color name="color_toolbar_quiz_text">#dce1e1</color>
+    <color name="color_activity_background">#f3f3f3</color>
+    <color name="color_dialog_background">#5EACD5</color>
+    <color name="color_dialog_text">#ffffff</color>
+    <color name="color_dialog_button_tillbaka">#dbe3e3</color>
+    <color name="color_dialog_button_text_tillbaka">#a95422</color>
+    <color name="color_button_more">#d9e8e1</color>
+    <color name="color_menu_item1">#b78e1d</color>
+    <color name="color_menu_item2">#a1a4c3</color>
+    <color name="color_menu_item3">#5b8a1d</color>
+    <color name="color_menu_item4">#776e5d</color>
+    <color name="color_menu_item_text">#dce1e1</color>
+
+    <!-- by Apurv-->
+    <color name="color_screen2_heading">#7f6e36</color>
+    <color name="color_screen2_text">#000000</color>
+    <color name="color_screen2_image_background">#ffffff</color>
+    <color name="color_screen2_text_background">#f3f3f3</color>
+    <color name="color_screen2_button1">#6e85af</color>
+    <color name="color_screen1_button2">#3a6375</color>
+    <color name="color_button_text_more">#4f4d54</color>
+
+</resources>

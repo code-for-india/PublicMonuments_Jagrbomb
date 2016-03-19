@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cfi"
+    android:versionName="0.1">
+
+    <supports-screens android:largeScreens="true" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <permission
+        android:name="com.your.domain.PAYMENT_BROADCAST_PERMISSION"
+        android:label="Read payment status"
+        android:protectionLevel="signature" />
+    <!--"signature" permission granted automatically by system, without notifying user.
+    -->
+    <uses-permission android:name="com.your.domain.PAYMENT_BROADCAST_PERMISSION" />
+    <!--&lt;!&ndash; If your app doesn't need to make phone calls, you can add this, so the app
+    --><!--could be installed on tablets. &ndash;&gt;-->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.cfi.BeaconReferenceApplication"
+        android:allowBackup="true"
+        android:excludeFromRecents="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleInstance"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.cfi.activity.SplashScreenActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.cfi.activity.GoogleMapActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cfi.activity.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cfi.activity.AboutActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cfi.activity.FortunoPaymentActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cfi.activity.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.cfi.activity.TicketDetailsActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDkxbLEqbR2nX0_GVc2Rc6oWrM4aiIFLk4" />
+
+    </application>
+</manifest>

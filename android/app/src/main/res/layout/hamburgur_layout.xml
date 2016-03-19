@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hamburger"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textview_menu_item1"
+        android:layout_width="@dimen/menu_item_width"
+        android:layout_height="@dimen/menu_item_height"
+        android:layout_marginTop="@dimen/menu_item1_margin_top"
+        android:layout_marginBottom="@dimen/menu_item_margin_bottom"
+        android:text="@string/hamburger_layout_text1"
+        android:background="@color/color_menu_item1"
+        android:textColor="@color/color_menu_item_text"
+        android:layout_gravity="right"
+        android:paddingLeft="@dimen/menu_item_text_padding_left"
+        android:textSize="@dimen/menu_item_textSize"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/textview_menu_item2"
+        android:layout_width="@dimen/menu_item_width"
+        android:layout_height="@dimen/menu_item_height"
+        android:text="@string/hamburger_layout_text2"
+        android:layout_marginBottom="@dimen/menu_item_margin_bottom"
+        android:background="@color/color_menu_item2"
+        android:textColor="@color/color_menu_item_text"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/menu_item_text_padding_left"
+        android:textSize="@dimen/menu_item_textSize" />
+
+    <TextView
+        android:id="@+id/textview_menu_item3"
+        android:layout_width="@dimen/menu_item_width"
+        android:layout_height="@dimen/menu_item_height"
+        android:text="@string/hamburger_layout_text3"
+        android:layout_marginBottom="@dimen/menu_item_margin_bottom"
+        android:background="@color/color_menu_item3"
+        android:textColor="@color/color_menu_item_text"
+        android:paddingLeft="@dimen/menu_item_text_padding_left"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/menu_item_textSize" />
+
+    <TextView
+        android:id="@+id/textview_menu_item4"
+        android:layout_width="@dimen/menu_item_width"
+        android:layout_height="@dimen/menu_item_height"
+        android:background="@color/color_menu_item4"
+        android:text="@string/hamburger_layout_text4"
+        android:textColor="@color/color_menu_item_text"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/menu_item_text_padding_left"
+        android:textSize="@dimen/menu_item_textSize" />
+</LinearLayout>

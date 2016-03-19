@@ -1,0 +1,234 @@
+ext {
+    SONATYPE_URL = ""
+    IS_DEV_BUILD = false
+    IS_RELEASE_BUILD = false
+    GROUP = "org.altbeacon"
+}
+
+/*
+ * Gets the version name from the latest Git tag
+ */
+def getVersionName = { ->
+    def stdout = new ByteArrayOutputStream()
+    try {
+        exec {
+            commandLine 'git', 'describe', '--tags'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
+    }
+    catch (e) {
+        println("Can't get version from git: "+e);
+        return "adhoc"
+    }
+}
+
+version = getVersionName()
+group = GROUP
+
+if (hasProperty("release")) {
+    IS_RELEASE_BUILD = true
+    SONATYPE_URL = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+} else if (hasProperty("snapshot")) {
+    version += "-SNAPSHOT"
+    SONATYPE_URL = "https://oss.sonatype.org/content/repositories/snapshots/"
+} else {
+    IS_DEV_BUILD = true
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.0'
+    }
+}
+
+apply plugin: 'android-sdk-manager'
+apply plugin: "android-library"
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
+    }
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName version
+        testInstrumentationRunner "com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    sourceSets {
+        androidTest {
+            setRoot('src/test')
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+
+}
+
+dependencies {
+    androidTestCompile 'org.hamcrest:hamcrest-integration:1.3'
+    androidTestCompile 'org.hamcrest:hamcrest-core:1.3'
+    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+
+}
+
+apply plugin: 'idea'
+
+idea {
+    module {
+        testOutputDir = file('build/test-classes/debug')
+    }
+}
+
+apply plugin: "maven"
+apply plugin: "signing"
+
+afterEvaluate { project ->
+    uploadArchives {
+        repositories {
+            if (IS_DEV_BUILD) {
+                mavenLocal()
+            } else {
+                mavenDeployer {
+                    beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+                    repository(url: SONATYPE_URL) {
+                        authentication(userName: sonatypeUsername, password: sonatypePassword)
+                    }
+
+                    println GROUP
+
+
+                    pom.project {
+                        name 'Android Beacon Library'
+                        packaging 'aar'
+                        description 'Beacon library for Android applications'
+                        artifactId = 'android-beacon-library'
+                        groupId GROUP
+                        version version
+                        url 'https://github.com/RadiusNetworks/android-beacon-library'
+
+                        scm {
+                            url 'scm:git@github.com:RadiusNetworks/android-beacon-library.git'
+                            connection 'scm:git@github.com:RadiusNetworks/android-beacon-library.git'
+                            developerConnection 'scm:git@github.com:RadiusNetworks/android-beacon-library.git'
+                        }
+
+                        licenses {
+                            license {
+                                name 'The Apache Software License, Version 2.0'
+                                url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                                distribution 'repo'
+                            }
+                        }
+
+                        developers {
+                            developer {
+                                id 'davidgyoung'
+                                name 'David Young'
+                                email 'david@radiusnetworks.com'
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    signing {
+        required { IS_RELEASE_BUILD && gradle.taskGraph.hasTask("uploadArchives") }
+        sign configurations.archives
+    }
+
+    task androidJavadocs(type: Javadoc) {
+        source = android.sourceSets.main.java
+    }
+
+    task androidJavadocsJar(type: Jar) {
+        classifier = 'javadoc'
+        from androidJavadocs.destinationDir
+    }
+
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.srcDirs
+    }
+
+    artifacts {
+        archives androidSourcesJar
+        archives androidJavadocsJar
+    }
+}
+
+/** Bundling tasks for eclipse */
+task bundleEclipse << {
+    exec {
+        executable 'scripts/bundle-eclipse'
+    }
+}
+
+task distribution(dependsOn: ["bundleEclipse", "build", "clean"]) << {
+    println "Building with version=$version"
+}
+
+task release(dependsOn: 'distribution') << {
+    println('Doing release build')
+}
+
+android.libraryVariants.all { variant ->
+
+        task("generate${variant.name}Javadoc", type: Javadoc) {
+            title = "$name $version API"
+            description "Generates Javadoc for $variant.name."
+            source = variant.javaCompile.source
+            ext.androidJar =
+                    "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar"
+            classpath = files(variant.javaCompile.classpath.files) + files(ext.androidJar)
+            options.links("http://docs.oracle.com/javase/7/docs/api/");
+            options.links("http://d.android.com/reference/");
+            exclude '**/BuildConfig.java'
+            exclude '**/R.java'
+        }
+
+    }
+
+build.mustRunAfter clean
+bundleEclipse.mustRunAfter build

@@ -1,0 +1,109 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="quiz_submission_margin_top">86dp</dimen>
+    <dimen name="quiz_submission_margin_left">54dp</dimen>
+    <dimen name="quiz_submission_margin_right">54dp</dimen>
+    <dimen name="quiz_submission_heading_margin_top">122dp</dimen>
+    <dimen name="quiz_submission_margin_top_elements">22dp</dimen>
+    <dimen name="quiz_submission_margin_left_elements">146dp</dimen>
+    <dimen name="quiz_submission_button_width">215dp</dimen>
+    <dimen name="quiz_submission_button_height">40dp</dimen>
+    <dimen name="quiz_submission_margin_between_button">115dp</dimen>
+    <dimen name="quiz_submission_button_margin_left">200dp</dimen>
+    <dimen name="quiz_submission_edittext_height">45dp</dimen>
+    <dimen name="quiz_submission_edittext_width">570dp</dimen>
+
+    <!--Quiz Row Dimensions-->
+    <dimen name="checkbox_width">24dp</dimen>
+    <dimen name="checkbox_height">24dp</dimen>
+    <dimen name="margin_between_questions">50dp</dimen>
+    <dimen name="margin_between_options">20dp</dimen>
+    <dimen name="quiz_layout_width">1170dp</dimen>
+    <dimen name="margin_between_options_text_checkbox">10dp</dimen>
+
+    <!--Quiz Page-->
+    <dimen name="quiz_header_text_size">60sp</dimen>
+
+    <!--ADDED BY APURV-->
+    <dimen name="details_item_text_size">18sp</dimen>
+    <dimen name="heading_item_text_size">24sp</dimen>
+    <dimen name="details_item_text_view_layout_width">285dp</dimen>
+    <dimen name="margin_between_heading_and_details">20dp</dimen>
+    <dimen name="more_button_text_size">24sp</dimen>
+
+
+    <!--ADD BY BHARAT-->
+
+
+    <dimen name="header_height">146dp</dimen>
+    <dimen name="header_logo_margin_top">44dp</dimen>
+    <dimen name="header_logo_margin_left">60dp</dimen>
+    <dimen name="header_title_margin_top">30dp</dimen>
+    <dimen name="header_title_margin_left">14dp</dimen>
+    <dimen name="header_title_text_size">60sp</dimen>
+    <dimen name="header_hamburger_margin_top">44dp</dimen>
+    <dimen name="header_hamburger_margin_right">54dp</dimen>
+    <dimen name="header_quiz_button_margin_top">44dp</dimen>
+    <dimen name="header_quiz_button_margin_right">98dp</dimen>
+    <dimen name="header_quiz_button_height">40dp</dimen>
+    <dimen name="header_quiz_button_width">215dp</dimen>
+    <dimen name="header_quiz_button_text_size">34sp</dimen>
+    <dimen name="dialog_width">875dp</dimen>
+    <dimen name="dialog_height">528dp</dimen>
+    <dimen name="dialog_title_textsize">40sp</dimen>
+    <dimen name="dialog_title_margin_top">30dp</dimen>
+    <dimen name="dialog_title_margin_left">150dp</dimen>
+    <dimen name="dialog_title_margin_right">150dp</dimen>
+    <dimen name="dialog_message_margin_left">150dp</dimen>
+    <dimen name="dialog_message_margin_right">150dp</dimen>
+    <dimen name="dialog_message_margin_top">150dp</dimen>
+    <dimen name="dialog_linearlayout_margin_top">55dp</dimen>
+    <dimen name="dialog_linearlayout_margin_left">150dp</dimen>
+    <dimen name="dialog_linearlayout_margin_right">150dp</dimen>
+    <dimen name="dialog_button2_margin_left">150dp</dimen>
+    <dimen name="dialog_button_height">40dp</dimen>
+    <dimen name="dialog_button_width">215dp</dimen>
+    <dimen name="menu_item1_margin_top">168dp</dimen>
+    <dimen name="menu_item_height">100dp</dimen>
+    <dimen name="menu_item_width">266dp</dimen>
+    <dimen name="menu_item_text_padding_left">28dp</dimen>
+    <dimen name="menu_item_text_size">24sp</dimen>
+    <dimen name="menu_item_margin_bottom">20dp</dimen>
+    <dimen name="menu_item_textSize">24sp</dimen>
+
+    <!-- Beacon detection screens -->
+    <dimen name="more_button_height">40dp</dimen>
+    <dimen name="more_button_width">215dp</dimen>
+    <dimen name="more_button_margin_bottom">35dp</dimen>
+
+
+    <!--Quiz Activity Addition-->
+    <dimen name="margin_between_input_heading_subheading">25dp</dimen>
+    <dimen name="margin_between_input_subheading_inputtext">20dp</dimen>
+    <dimen name="quiz_edittext_height">105dp</dimen>
+    <dimen name="quiz_edittext_width">620dp</dimen>
+    <dimen name="margin_between_edittext_subheading">30dp</dimen>
+    <dimen name="quiz_text_font_size">24sp</dimen>
+    <dimen name="header_quiz_button_height_increased">44dp</dimen>
+
+
+    <!--Quiz Submission Addition-->
+    <dimen name="quiz_submission_margin_from_toolbar">165dp</dimen>
+    <dimen name="quiz_submission_left_margin_from_screen">200dp</dimen>
+    <dimen name="quiz_submission_margin_heading_from_dialog">40dp</dimen>
+    <dimen name="quiz_submission_margin_between_subHeading_heading">25dp</dimen>
+    <dimen name="quiz_submission_margin_between_input1_subheading">15dp</dimen>
+    <dimen name="quiz_submission_margin_between_input1_subheading2">45dp</dimen>
+    <dimen name="quiz_submission_margin_between_input2_subheading2">15dp</dimen>
+    <dimen name="quiz_submission_input_width">620dp</dimen>
+    <dimen name="quiz_submission_input_height">50dp</dimen>
+    <dimen name="quiz_submission_dialog_left_margin">200dp</dimen>
+    <dimen name="quiz_submission_elements_left_margin">145dp</dimen>
+    <dimen name="quiz_submission_elements_right_margin">115dp</dimen>
+    <dimen name="quiz_submission_margin_button_input2">90dp</dimen>
+    <dimen name="quiz_submission_margin_button_from_dialog_end">60dp</dimen>
+    <dimen name="quiz_submission_dialog_width">880dp</dimen>
+
+</resources>

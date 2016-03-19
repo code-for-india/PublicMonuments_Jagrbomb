@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Uppdrag Nobel</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Quiz Submission Strings -->
+    <string name="quiz_submission_heading">SKICKA IN QUIZ</string>
+    <string name="quiz_submission_heading_input_1">Vem/vilka har gjort quizet (namn &amp; klass)?</string>
+    <string name="quiz_submission_heading_input_2">Fyll i e-postaddress som quizen skall skickas till:</string>
+    <string name="quiz_submission_button_cancel">AVBRYT</string>
+    <string name="quiz_submission_button_send">SKICKA</string>
+    <string name="title_activity_quiz">quiz</string>
+
+    <!-- Quiz Activity Strings -->
+    <string name="quiz_activity_heading">Quiz!</string>
+    <string name="quiz_activity_introduction">För att lösa quizet behöver endast huvudtexterna läsas,\ninte fördjupningstexterna.</string>
+    <string name="quiz_submit_result">Skicka resultat</string>
+    <string name="quiz_question_one">Vad använde man innan transistorn?</string>
+    <string name="quiz_question_two">Vad användes transistorer i förutom radioapparater?</string>
+    <string name="quiz_question_three">Vad försökte Boyle och Smith egentligen göra när de kom på bildsensorn CCD?</string>
+    <string name="quiz_question_four">När utvecklades CCD-sensorn?</string>
+    <string name="quiz_question_five">Vad består materialet grafen av?</string>
+    <string name="quiz_question_six">Vad använde Geim och Novoselov när de framställde de första proven av grafen?</string>
+    <string name="quiz_question_one_solution">2</string>
+    <string name="quiz_question_two_solution">2</string>
+    <string name="quiz_question_three_solution">2</string>
+    <string name="quiz_question_four_solution">2</string>
+    <string name="quiz_question_five_solution">2</string>
+    <string name="quiz_question_six_solution">2</string>
+    <string name="quiz_question_one_option_one">Flytande kristaller</string>
+    <string name="quiz_question_one_option_two">Elektronrör</string>
+    <string name="quiz_question_one_option_three">Integrerade kretsar</string>
+    <string name="quiz_question_two_option_one">Batterier</string>
+    <string name="quiz_question_two_option_two">Kraftverk</string>
+    <string name="quiz_question_two_option_three">Datorer</string>
+    <string name="quiz_question_three_option_one">Ett elektroniskt minne</string>
+    <string name="quiz_question_three_option_two">Elektronrör</string>
+    <string name="quiz_question_three_option_three">Integrerade kretsar</string>
+    <string name="quiz_question_four_option_one">1969</string>
+    <string name="quiz_question_four_option_two">1989</string>
+    <string name="quiz_question_four_option_three">2009</string>
+    <string name="quiz_question_five_option_one">Kisel</string>
+    <string name="quiz_question_five_option_two">Kvarts</string>
+    <string name="quiz_question_five_option_three">Kol</string>
+    <string name="quiz_question_six_option_one">En pennvässare</string>
+    <string name="quiz_question_six_option_two">Tejp</string>
+    <string name="quiz_question_six_option_three">Suddgummi</string>
+
+    <!-- ADD BY BHARAT -->
+
+    <string name="toolbar_title">Krympande teknik</string>
+    <string name="toolbar_quiz_button_text">Quiz!</string>
+    <string name="dialog1_title">KRYMPANDE TEKNIK</string>
+    <string name="dialog1_text">På nästa skärm kommer du se tre föremål som finns någonstans på Nobelmuseet – alla tre har att göra med temat ”Krympande teknik”. För att klara uppdraget ska du hitta föremålen i utställningen, aktivera dem och svara på en quiz.</string>
+    <string name="dialog_button">FORTSÄTT</string>
+    <string name="dialog_unlock_button">Stäng</string>
+
+    <string name="hamburger_layout_text1">BYT SPRÅK</string>
+    <string name="hamburger_layout_text2">HJÄLP</string>
+    <string name="hamburger_layout_text3">STARTA OM</string>
+    <string name="hamburger_layout_text4">OM APPEN</string>
+    <string name="title_activity_hamburgur_menu">HamburgurMenu</string>
+    <string name="title_activity_quiz_submission">QuizSubmission</string>
+
+    <!-- by Apurv -->
+
+    <string name="heading_on_lock">AKTIVERA</string>
+    <string name="text_on_lock">Aktivera föremålet genom att leta reda på det i utställningen stå tillräckligt nära det. </string>
+    <string name="heading_on_unlock_radio">TRANSISTORRADION</string>
+    <!--<string name="text_on_unlock_radio">Nobelpriset i fysik 1956: John Bardeen, Walter Brattain och William Shockley för utvecklingen av transistorn.
+av transitorn.\nDen första transistorn utvecklades 1947.\nTransistorn är tillverkad av halvledare, material med egenskaper som är ett mellanting mellan elektrisk ledare och isolatorer.</string>-->
+    <string name="text_on_unlock_radio">Nobelpriset i fysik 1956 tilldelades John Bardeen, Walter Brattain och William Shockley för utvecklingen av transistorn.</string>
+    <string name="heading_on_unlock_camera">DIGITALKAMERA</string>
+    <string name="text_on_unlock_camera"> Nobelpriset i fysik 2009 tilldelades Willard Boyle och George Smith för CCD-sensorn som används i digitalkameror</string>
+<!--
+Den första CCD-sensorn utvecklades 1969.
+Boyle och Smith delade priset med Charles Kao, som fick priset för utveckling av fiberoptik.</string>
+-->
+    <string name="heading_on_unlock_rock">GRAFEN</string>
+    <!--<string name="text_on_unlock_rock">Nobelpriset i fysik 2010: Andre Geim och Konstantin Novoselov för upptäckten av materialet grafen.
+Grafen är oerhört tunt, men ändå mycket starkt och kan förutom inom elektronik bli användbart inom materialteknik.</string>-->
+    <string name="text_on_unlock_rock"> Nobelpriset i fysik 2010 tilldelades Andre Geim och Konstantin Novoselov för upptäckten av materialet grafen.</string>
+    <string name="text_radio_para">På 1950-talet kom transistorradion. Den var betydligt mindre än tidigare radioapparater. Den kallades transistorradio på grund av att den byggdes med elektroniska komponenter som kallas transistorer. Orsaken till att apparaten var mindre var att transistorerna var mycket mindre än de elektronrör som användes tidigare.\n\nTransistorns funktion i radioapparaten var att förstärka elektriska signaler.\nTransistorn kan också fungera som en sorts strömbrytare. I datorer används detta för att hantera de ettor och nollor som information lagras i där.\n</string>
+    <string name="heading_radio_para1">Halvledare, likriktning och förstärkning</string>
+    <string name="text_radio_para1">Halvledare är material med egenskaper som ligger mellan elektrisk ledare och isolatorer.\n\nFerdinand Braun upptäckte 1874 att kristaller av vissa halvledare kunde fungera som likriktare av elektrisk ström. Detta användes i tidiga radiomottagare för att omvandla elektriska svängningar i en antenn till ljud. Braun delade 1909 års Nobelpris i fysik med Guglielmo Marconi för andra insatser inom trådlös telegrafi.\n\nAtt halvledare kunde fungera som likriktare väckte förhoppningar om bredare användning i elektriska komponenter. Till exempel kan en elektrisk komponent som bara leder ström i en riktning användas som förstärkare. Det dröjde dock innan halvledarförstärkare kunde byggas. I början av 1900-talet utvecklades i stället elektronrör för att fungera som förstärkare. Dessa utgjordes av ett glasrör med en elektrisk pol i vardera ändan och styrgaller däremellan.\n\nBland annat med hjälp av den nya kvantfysiken fick man en djupare förståelse av hur halvledare fungerar. Detta banade väg utvecklingen av transistorn – en halvledarkomponent som kan användas som förstärkare. En transistor har tre kontakter, där man genom att variera en svag spänning över ett par av kontakter kan få förstärkta variationer av en starkare spänning över ett annat par av kontakter.\n
+</string>
+    <string name="heading_radio_para2"> Heterostrukturer och integrerade kretsar</string>
+    <string name="text_radio_para_2">Efter utvecklingen av de första transistorerna fortsatte en snabb utveckling av nya varianter av transistorer och andra elektroniska komponenter. I vissa komponenter används så kallade heterostrukturer, där olika halvledarmaterial ligger i tunna skikt, som i en dubbelsmörgås med flera olika pålägg. En pionjär på området var Herbert Kroemer, som 1957 utvecklade en transistor byggd på heterostrukturer. En annan var Zhores Alferov som utvecklade lasrar baserade på heterostrukturer.\n\nDen fortsatta utvecklingen av elektroniska komponenter innebar att dessa kunde göras allt mindre. 1959 visade Jack Kilby och Robert Noyce oberoende av varandra att en mängd transistorer, resistorer och kondensatorer kunde samlas på en enda platta av halvledarmaterial. Den integrerade kretsen – eller mikrochipet – blev av stor betydelse för datorer och annan elektronik.\n\nJack Kilby, Herbert Kroemer och Zhores Alferov tilldelades Nobelpriset i fysik 2000.\n</string>
+    <string name="text_camera_para">Elektroniska kretsar som fångar upp bilder finns på många ställen i vår omvärld, i digitalkameror, mobiltelefoner, läsplattor och datorer. Idag finns det bildsensorer av flera olika typer. Den första typen var CCD-detektorn.\n\nWillard Boyle och George Smith skissade egentligen på ett elektroniskt minne när de kom på att deras idé kunde användas för att fånga upp bilder på elektronisk väg. I sensorn finns ett rutnät av ljuskänsliga celler där inkommande ljus slår ut elektroner så att cellerna blir elektriskt laddade. När en spänning läggs över cellerna uppstår elektriska signaler, som används för att bygga upp en digital bild.\n</string>
+    <string name="heading_camera_para1">Fiberoptik</string>
+    <string name="text_camera_para1">Willard Boyle och George Smith delade Nobelpriset i fysik 2009 med Charles Kao.\n\nKao fick priset för banbrytande insatser inom fiberoptik, som används för överföring av signaler bland annat i våra fasta bredbandsnät.\n\nGlasfibrer, tunna trådar av glas, kan användas som en sorts "ljusledare" genom att ljus skickas in i fibern, där det studsar fram mot fiberns innerväggar och till slut kommer ut i andra ändan av fibern. Detta har sedan 1930-talet använts för att se in i kroppen. Att använda fibrerna för informationsöverföring på långa avstånd var länge omöjligt eftersom för mycket ljus försvann på vägen. Charles Kao lade på 1960-talet fram en lösning på problemet: fibrer av mycket rent glas släppte fram tillräckligt mycket ljus. Tillsammans med laserteknik har detta möjliggjort telekommunikation med optiska fibrer.\n
+
+ </string>
+    <string name="heading_camera_para2">Fiberoptik\n</string>
+    <string name="text_camera_para2">Willard Boyle och George Smith delade Nobelpriset i fysik 2009 med Charles Kao.\n\nKao fick priset för banbrytande insatser inom fiberoptik, som används för överföring av signaler bland annat i våra fasta bredbandsnät.\n\nGlasfibrer, tunna trådar av glas, kan användas som en sorts "ljusledare" genom att ljus skickas in i fibern, där det studsar fram mot fiberns innerväggar och till slut kommer ut i andra ändan av fibern. Detta har sedan 1930-talet använts för att se in i kroppen. Att använda fibrerna för informationsöverföring på långa avstånd var länge omöjligt eftersom för mycket ljus försvann på vägen. Charles Kao lade på 1960-talet fram en lösning på problemet: fibrer av mycket rent glas släppte fram tillräckligt mycket ljus. Tillsammans med laserteknik har detta möjliggjort telekommunikation med optiska fibrer.</string>
+    <string name="text_rock_para">Vad är framtidens material inom elektronik? Kanske är det "grafen" – ett nät av kolatomer formerade i sexkanter och endast ett atomlager tjockt. Det sågs länge som en rent teoretisk konstruktion, men 2004 lyckades Andre Geim och Konstantin Novoselov framställa grafen i verkligheten. Genom att fånga upp tunna flagor av grafit (kol av den typ som används i blyertspennor) med hjälp tejpremsor kunde de visa att grafen faktiskt gick att framställa. Ganska snart kunde de också konstruera en transistor av grafen. Kanske kan grafen ge oss ännu mindre och ännu mer effektiv elektronik?\n</string>
+    <string name="heading_rock_para1">Fullerener och nanotuber\n</string>
+    <string name="text_rock_para1">Grafen är bara en av flera former som det rena grundämnet kol kan anta. I naturen finns det till exempel som grafit och diamant.\n\nRobert Curl, Richard Smalley och Harold Kroto bestrålade 1985 en yta av grafit med laserpulser så att kolgas bildades. När kolgasen kondenserade bildades tidigare okända former av kol, där atomerna var ordnade i andra strukturer. Den vanligaste strukturen hade 60 kolatomer ordnade i ett klot uppbyggt av fem- och sexkanter. Strukturerna kallades "fullerener" efter arkitekten Buckminister Fuller som arbetat med denna geometriska form. Den geometriska formen förekommer också i ett ännu vanligare sammanhang: en fotboll ser ut precis på detta sätt! Curl, Smalley och Kroto fick 1996 års kemipris för sina upptäckter.\n\nKolatomer kan också bilda en struktur som bildar ett rör. Nanorör kallas denna form, som precis som grafen kan få stor användning bland annat inom elektronik i framtiden.\n\n
+
+</string>
+    <string name="heading_rock_para2">Andre Gejm och Konstantin Novoselov\n</string>
+    <string name="text_rock_para2">I naturen förekommer kol i flera olika former. Ett material bestående av ett nät av kolatomer formerade i sexkanter och endast ett atomlager tjockt sågs dock länge som en rent teoretisk konstruktion. Andre Gejm och Konstantin Novoselov lyckades dock 2004 framställa materialet "grafen" i verkligheten och kartlade dess egenskaper: oerhört tunt men ändå oerhört starkt, god ledningsförmåga för elektricitet och värme, nästan helt genomskinligt men ändå mycket tätt. Grafen öppnar nya möjligheter inom materialteknik och elektronik.\n\n</string>
+    <string name="heading_rock_para3">Andre Gejm</string>
+    <string name="text_rock_para3">Andre Gejm föddes i Sotji i Ryssland i en familj av tyskt ursprung. De första sju åren växte han upp hos sina morföräldrar. I efterhand har Gejm fått veta att både hans farfar och hans far, som var fysiker, tillbringade flera år i fånglägren Gulag. Efter doktorsexamen i fysik vid ryska vetenskapsakademien i Chernogolovka har Gejm verkat vid flera europeiska universitet, däribland i Nijmegen i Nederländerna. Han är sedan 2001 verksam vid University of Manchester i Storbritannien. Gejm är gift och har barn.\n\n</string>
+    <string name="heading_rock_para4">Konstantin Novoselov</string>
+    <string name="text_rock_para4">Konstantin Novosiolov, är född i Nizjnij Tagil i Ryssland. Efter studier i Moskva doktorerade Novosiolov med Andre Gejm som handledare, först vid Radboud-universitetet i Nijmegen i Nederländerna och därefter University of Manchester i Storbritannien. Novosiolov är gift och har två döttrar.\n</string>
+
+
+    <string-array name="beacon_selection">
+        <item>Beacon 1</item>
+        <item>Beacon 2</item>
+        <item>Beacon 3</item>
+
+    </string-array>
+    <!-- by Apurv -->
+
+
+    <!-- added by Upasana -->
+    <string name="beacon_detection_more_button">MER</string>
+
+    <!-- Quiz Activity Addition -->
+
+    <string name="quiz_submission_input_heading">Fråga att fundera på:</string>
+    <string name="quiz_submission_input_sub_heading">Vad tycker du blir viktigast i elektroniken i framtiden? Skriv ned\nnågra tankar!</string>
+    <string name="title_activity_settings">Settings</string>
+
+
+    <!--quiz_unlock_dialog-->
+    <string name="quiz_unlock_dialog_title">Alla föremål hittade!</string>
+    <string name="quiz_unlock_dialog_message">Grattis, du har hittat och aktiverat alla föremål och låst upp quizet. Tryck på knappen ”Mer info” för att läsa om ett föremål. Tryck på knappen ”Quiz” för att öppna quizet och fylla i dina svar. Tryck på ”Quiz” igen för att stänga quiz-rutan. När quizet är färdigt trycker trycker du på knappen ”Skicka” längst ner på quizet och fyller i ditt namn, klass och en e-postadress dit det ska skickas.</string>
+
+</resources>

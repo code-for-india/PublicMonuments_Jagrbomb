@@ -37,7 +37,7 @@
 				{
 					"type": "html",
 					"settings": {
-						"html": "return '<div id=\"report-table\"></div><script> var monitorF = new Firebase(\"https://vivid-inferno-4516.firebaseio.com\"); monitorF.child(\"report\").on(\"value\", function(snapshot) {var reportInfo = $(\"#report-table\"); reportInfo.empty(); snapshot.forEach(function(childSnapshot) { var user = childSnapshot.val(); if(user[\"actionRequired\"] == \"true\"){$(\"#reportInfo\").append(\"<p>Reported suspected activity around (lat,long)#\" + user[\"lat\"] + \", \" + user[\"long\"] + \"</p>\");}}); }); </script>';",
+						"html": "return '<div id=\"report-table\"></div><script> var monitorF = new Firebase(\"Enter your firebase URL\"); monitorF.child(\"report\").on(\"value\", function(snapshot) {var reportInfo = $(\"#report-table\"); reportInfo.empty(); snapshot.forEach(function(childSnapshot) { var user = childSnapshot.val(); if(user[\"actionRequired\"] == \"true\"){$(\"#reportInfo\").append(\"<p>Reported suspected activity around (lat,long)#\" + user[\"lat\"] + \", \" + user[\"long\"] + \"</p>\");}}); }); </script>';",
 						"height": 6
 					}
 				}
@@ -57,7 +57,7 @@
 				{
 					"type": "html",
 					"settings": {
-						"html": "return '<table id=\"info-table\" border=\"1\"></table><script> var monitorF = new Firebase(\"https://vivid-inferno-4516.firebaseio.com\"); monitorF.child(\"user\").on(\"value\", function(snapshot) {var info = $(\"#info-table\"); info.empty(); $(\"#suspected-table\").empty; info.append(\"<tr> <td><b>Name</b></td> <td><b>Aadhar Number</b></td> <td><b>Payment</b></td> </tr>\"); snapshot.forEach(function(childSnapshot) { var user = childSnapshot.val(); info.append(\"<tr><td>\" + user[\"name\"] + \"</td><td>\" + user[\"aadhar\"] + \"</td><td>\" + user[\"payment\"] + \"</td></tr>\"); if(user[\"actionRequired\"] == \"true\"){$(\"#suspected-table\").append(\"<p>Suspected Activity around beacon#\" + user[\"beacon\"] + \" by \" + user[\"name\"] + \" with aadhar \" + user[\"aadhar\"] + \".</p>\");}}); }); </script>';",
+						"html": "return '<table id=\"info-table\" border=\"1\"></table><script> var monitorF = new Firebase(\"Enter your firebase URL\"); monitorF.child(\"user\").on(\"value\", function(snapshot) {var info = $(\"#info-table\"); info.empty(); $(\"#suspected-table\").empty; info.append(\"<tr> <td><b>Name</b></td> <td><b>Aadhar Number</b></td> <td><b>Payment</b></td> </tr>\"); snapshot.forEach(function(childSnapshot) { var user = childSnapshot.val(); info.append(\"<tr><td>\" + user[\"name\"] + \"</td><td>\" + user[\"aadhar\"] + \"</td><td>\" + user[\"payment\"] + \"</td></tr>\"); if(user[\"actionRequired\"] == \"true\"){$(\"#suspected-table\").append(\"<p>Suspected Activity around beacon#\" + user[\"beacon\"] + \" by \" + user[\"name\"] + \" with aadhar \" + user[\"aadhar\"] + \".</p>\");}}); }); </script>';",
 						"height": 6
 					}
 				}

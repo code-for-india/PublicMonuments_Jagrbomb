@@ -44,7 +44,7 @@ public class RegisterActivity extends Activity {
 
     private void register() {
 
-        Firebase ref = new Firebase("https://vivid-inferno-4516.firebaseio.com/");
+        Firebase ref = new Firebase("Enter your firebase URL");
 
         EditText editTextAadharNo = (EditText) findViewById(R.id.adhar_number);
         EditText editTextUserName = (EditText) findViewById(R.id.user_name);

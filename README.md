@@ -1,5 +1,5 @@
 # Public Monuments Entry and Surveillance
-Team Jagrbomb at Code For India Social Innovation Hackathon at Rastrapathi Bhavan, Delhi, India
+Team Jagrbomb at Code For India Social Innovation Hackathon at Rashtrapati Bhavan, Delhi, India
 
 **Team Members:**
 
